@@ -7,12 +7,12 @@ import { NavController } from 'ionic-angular';
   styleUrls: ['home.css']
 })
 export class HomePage {
-  height: number;
-  weight: number;
+  PowerConsumption: number;
+  HoursoffUse: number;
   bmi: number; 
   bmiMessage: string;
 calculateBMI() {
-  this.bmi = this.weight / (this.height * this.height);
+  this.bmi = this.weight / (this.PowerConsumption * this.PowerConsumption);
   this.bmi = parseFloat(this.bmi.toFixed(2));
 
   if (this.bmi < 18.5) {
